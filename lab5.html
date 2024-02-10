@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <title>Form 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <style>
+            /* Style for the button */
+            .gradient-button {
+              background-image: linear-gradient(to right, #ff0000, #4b0091); /* Gradient colors */
+              border: none; /* No border */
+              color: white; /* Text color */
+              padding: 10px 20px; /* Padding */
+              font-size: 16px; /* Font size */
+              font-weight: bold;
+              cursor: pointer; /* Cursor style */
+              border-radius: 5px; /* Border radius */
+              transition: background-image 0.3s; /* Smooth transition for background change */
+            }
+            
+            /* Style for hover effect */
+            .gradient-button:hover {
+              background-image: linear-gradient(to right, #ff6a00, #bc09ee); /* Gradient colors on hover */
+            }
+            .button-container{
+                display: flex; /* Use flexbox for layout */
+                margin-top: 20px; /* Add some top margin */
+            }
+            /* Style for spacing between buttons */
+        .gradient-button + .gradient-button {
+        margin-left: 10px; /* Small gap between buttons */
+            }
+            form, script, h1 {text-align: center;}
+        h1{color: #ff0000;}
+
+        body{color: brown; font-family: Arial, Helvetica, sans-serif; font-weight: bold;}
+    
+
+            /* Style for the form */
+        form {
+            border: 2px solid red; /* Add a border to the form */
+            padding: 20px; /* Add padding for spacing */
+            max-width: 400px; /* Limit the width of the form */
+            margin: 0 auto; /* Center the form horizontally */
+            }
+
+        label {width:200px;
+            display:inline-block;
+            justify-content: left;
+            text-align: left;
+            margin: 4px;}
+
+            /* Style for required input fields */
+            input:required {
+            border-color: red; /* Highlight required input fields in red */
+            }
+            div{
+                justify-content: left;}
+    
+                
+
+            </style>
+    </Head>
+    <body>
+    <form action="https://github.com/KC612/Week5Lab" method="post">
+        <h1>STUDENT REGISTRATION FORM</h1>
+        <div>
+            <label for="Firstname">First Name</label>
+            <input class="red" type="text" name="Firstname" placeholder="Enter First Name" required><br><br>
+        </div>
+        <div>
+            <label for="Lastname">Last Name</label>
+            <input class="text" type="text" name="Lastname" placeholder="Enter Last Name" required ><br><br>
+            </div>
+        <div>
+        <label for ="gender">Gender</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="radio" name="Gender" value="male">Male
+                <input type="radio" name="Gender" value="female">Female<br><br>
+        </div>
+        <div>
+        <label for="Age">Age</label>
+        <input class="red" Type="Age" name="age" placeholder="Enter your age" required><br><br>
+        </div>
+
+        <div>
+        <label for="dateofBirth">Date of Birth</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="Date" name="dateofBirth" placeholder="dd-mm-yyyy" required><br><br>
+        </div>
+
+        <div>
+        <label for="Email Address">Email Address</label>
+        <input class=red type="email" name="email" placeholder="Enter your email" required><br><br>
+        </div>
+        <div>
+        <label for="password">Password</label> 
+        <input type="text" name="Password" placeholder="Enter your password min 8 characters" required><br><br>
+        </div>
+        <div>
+        <label for="confirm">Confirm Password</label>
+        <input class=red type="text" name="ConfirmPassword" placeholder="Confirm password" required><br><br>
+        </div>
+
+        <div>
+       Phone Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <select name="PhoneNumber">
+            <optgroup lable="PhoneNumber">
+                <option value="91">+91</option> 
+                <input type="text" name="Phone_Number" placeholder="Enter your phone number" required><br><br>
+            </div>
+
+    </optgroup>
+        </select>
+        <label for="Address">Address</label>
+        <input type="text" name="Address" placeholder="Enter your address" required><br><br>
+
+        <label for="state">State</label> &nbsp;&nbsp;&nbsp;
+         <select name="State">
+            <optgroup lable="State" placeholder="Select your state" required>
+            <option value="State">--Select your state--</option><br><br>
+            <option value="State1">Alaska</option><br>
+            <option value="State2">Arizona</option><br>
+            <option value="State3">Arkansas</option><br>
+            <option value="State">Other</option><br><br>
+            </select><br>
+        <div>
+        <label for="Pin">Pin Code</label> 
+        <input class=red type="text" name="Pin Code" placeholder="Enter your pin code" required><br><br>
+        </div>
+        Hobbies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="hobby1" value="music">Music
+                <input type="checkbox" name="hobby2" value="movies">Movies
+                <input type="checkbox" name="hobby3" value="sports">Sports
+                <input type="checkbox" name="hobby4" value="travel">Travel<br><br>
+
+        <div>
+            <label for="photo">Upload Photo</label>&nbsp;&nbsp;&nbsp;
+            <span style="color:red; text-align: center;">*Max size 100kb</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" name="photo" id="fileInput" accept=".txt, .pdf, .docx"><br><br>
+        </div>
+        <div style="display: flex; justify-content: left;"></div>
+        <label for="" style="width: 0"></label>
+        <input
+        style="width:2%; margin:0"
+        type="checkbox"
+        name="dealer"
+        value="dealer"
+        <input type="checkbox" name="check" value="check" required><span style="color: black; font-weight: lighter;">I hereby declare that the above information provided is true and correct.</span><br><br>
+        <div class="g-recaptcha" data-sitekey="6LfKf20pAAAAAKUk9MDOZc9IuuM3i0YFg_jG9WHy"></div>
+        <button class="gradient-button">Register</button><button class="gradient-button">Reset</button>
+    </form>
+    </body>
+</html>

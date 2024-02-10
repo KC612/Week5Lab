@@ -1,0 +1,38 @@
+<DOCTYPE html>
+    <style>
+        input[type=submit]{
+            background-color: green;
+            color: aliceblue;
+            text-shadow: 1;
+            border: white;
+        }
+        label {width:200px;
+            display:inline-block;
+            justify-content: left;
+            text-align: left;
+            margin: 4px;}
+    </style>
+    <head>
+        <title>form 2</title>
+    </head>
+
+    <body>
+        <h1>Payment</h1>
+        <form action="/action_page.php">
+        <label for="name">Card Holder's Name</label>
+        <input type="text" name="name"><br>
+        <label for="card">Card Number</label>
+        <input type="text" name="card"><br>
+        <label class="label" for="date">Card Expiry Date</label>
+        <input type="month" id="date" min="jan" max="Dec">
+        <input type="number" id="date" value="2013" min="2013" max="2050">
+        <br>
+        <label for="cardccv">Card CVV</label>
+        <input type="text" name="cardccv"><br>
+        <input type="checkbox" id="savecard">
+            <label for="savecard">Save card on file?</label><br />
+        <p><input type="submit" name="submit"
+                        value="Pay Now"></p>
+    </form>
+    
+    </body>
